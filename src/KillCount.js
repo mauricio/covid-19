@@ -40,6 +40,8 @@ export function KillCount({ages}) {
   return (
     <React.Fragment>
       <div id="KillCount">
+        <InfectionsLineChart data={timeline} series="infected"/>
+        <InfectionsLineChart data={timeline} series="killed"/>
         <button onClick={nextWeek}>
           <FormattedMessage id="kill_count.live_another"/>
         </button>
@@ -60,8 +62,6 @@ export function KillCount({ages}) {
           <FormattedMessage id="kill_count.killed" values={{killed: killed}}/>
         </p>
       </div>
-      <InfectionsLineChart key={`infected-${timeline.length}`} data={timeline} series="infected"/>
-      <InfectionsLineChart key={`killed-${timeline.length}`} data={timeline} series="killed"/>
     </React.Fragment>
   )
 }
