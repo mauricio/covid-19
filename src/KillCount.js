@@ -60,7 +60,8 @@ export function KillCount({ages}) {
           <FormattedMessage id="kill_count.killed" values={{killed: killed}}/>
         </p>
       </div>
-      <InfectionsLineChart key={timeline.length} data={timeline}/>
+      <InfectionsLineChart key={`infected-${timeline.length}`} data={timeline} series="infected"/>
+      <InfectionsLineChart key={`killed-${timeline.length}`} data={timeline} series="killed"/>
     </React.Fragment>
   )
 }

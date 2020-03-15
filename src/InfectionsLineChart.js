@@ -26,9 +26,7 @@ class InfectionsLineChart extends React.Component {
     dateAxis.renderer.inversed = true;
     let valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
 
-    createSeries("infected", this.props.intl.messages["kill_count.infected_label"], this.props.data);
-
-    //createSeries("killed", this.props.intl.messages["kill_count.killed_label"], this.props.data);
+    createSeries(this.props.series, this.props.intl.messages[`kill_count.${this.props.series}_label`], this.props.data);
 
     function createSeries(s, name, data) {
       let series = chart.series.push(new am4charts.LineSeries());
@@ -90,9 +88,9 @@ class InfectionsLineChart extends React.Component {
     return (
       <React.Fragment>
         <h1>
-          <FormattedMessage id="kill_count.infected_label"/>
+          <FormattedMessage id={`kill_count.${this.props.series}_label`}/>
         </h1>
-        <div ref={el => this.el = el} style={{height: "400px"}}/>
+        <div ref={el => this.el = el} style={{height: "300px"}}/>
       </React.Fragment>
     );
   }
