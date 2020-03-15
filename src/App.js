@@ -1,7 +1,7 @@
 import React, {useEffect, useMemo, useRef, useState} from "react"
 import serializeForm from "form-serialize"
 import {BrowserRouter, Link, Route, Routes, useLocation, useNavigate} from "react-router-dom"
-import {FormattedMessage} from "react-intl";
+import {FormattedMessage, useIntl} from "react-intl";
 
 function App() {
   let [persons, setPersons] = useState(4)
@@ -62,7 +62,9 @@ function App() {
 function AgeSelect(props) {
   return (
     <select name="ages" {...props}>
-      <option value="UNSET">- set an age</option>
+      <option value="UNSET">
+        {useIntl().messages["age_select.set_an_age"]}
+      </option>
       {Array.from({length: 100}).map((_, index) => (
         <option key={index}>{index}</option>
       ))}

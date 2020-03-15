@@ -71,6 +71,7 @@ export const Messages = {
         Organization to be <a>between 1.4 and 2.5</a>. That means if you get it, you're going to infect 2 other people (other
         studies have it as high as 4!). By comparison, the flu is 1.3 and
         anything less than 1 will just die off.`,
+    "age_select.set_an_age": "- set an age",
   },
   "pt": {
     "app.title": "Distanciamento social",
@@ -140,5 +141,6 @@ export const Messages = {
       EUA - mesmo com os baixos níveis de teste.
       </p>`,
     "killers.attack_rate": `A Organização Mundial de Saúde estima que a <i>Taxa de Infecção</i> do COVID-19 está <a>entre 1.4 e 2.5</a>. isso significa que se você for infectado, você vai infectar duas outras pessoas (outros estudos definem ela como sendo até 4!). Comparando, a da gripe é de 1.3 e qualquer coisa com taxa menor do que 1 simplesmente desaparece naturalmente.`,
+    "age_select.set_an_age": "- escolha uma idade",
   },
 };
