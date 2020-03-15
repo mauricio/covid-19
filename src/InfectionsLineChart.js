@@ -96,7 +96,7 @@ class InfectionsLineChart extends React.Component {
         <h1>
           <FormattedMessage id={`kill_count.${this.props.series}_label`}/>
         </h1>
-        <div ref={el => this.el = el} style={{height: "300px"}}/>
+        <div ref={el => this.el = el} style={{height: "200px"}}/>
       </React.Fragment>
     );
   }
