@@ -40,6 +40,8 @@ export const Messages = {
     "kill_count.infected": "People You Infected: {infected}",
     "kill_count.killed": "People You Killed: {killed}",
     "kill_count.live_another": "Live another week",
+    "kill_count.infected_label": "Infected",
+    "kill_count.killed_label": "Dead",
     "killers.your_kill_count": `<h1>Your Kill Count</h1>
         <p>
           Social distancing is about how many people you want to kill (I hope
@@ -116,6 +118,8 @@ export const Messages = {
     "kill_count.infected": "Pessoas que você infectou: {infected}",
     "kill_count.killed": "Pessoas que você matou: {killed}",
     "kill_count.live_another": "Viva mais uma semana",
+    "kill_count.infected_label": "Infectados",
+    "kill_count.killed_label": "Mortos",
     "killers.your_kill_count": `<h1>Pessoas que você matou</h1>
         <p>
           Praticar distanciamento social define quantas pessoas você quer infectar e até matar (eu espero que seja zero).

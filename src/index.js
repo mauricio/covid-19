@@ -6,8 +6,14 @@ import * as serviceWorker from './serviceWorker';
 import {IntlProvider} from "react-intl";
 import {Messages} from "./Messages";
 
+const language = navigator.language.split(/[-_]/)[0];
+let messages = Messages[language];
+if (!messages) {
+  messages = Messages['pt'];
+}
+
 ReactDOM.render(
-  <IntlProvider locale="pt" messages={Messages["pt"]}>
+  <IntlProvider locale={language} messages={Messages["pt"]}>
     <App/>
   </IntlProvider>,
   document.getElementById('root'));
